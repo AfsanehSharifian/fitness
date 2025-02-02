@@ -52,7 +52,7 @@ body {
   height: 742px;
 }
 
-.hero-banner-img {
+.banner-img {
   position: absolute;
   right: 40px;
   top: 0px;
@@ -119,7 +119,7 @@ body {
     position: static !important;
   }
 
-  .hero-banner-img {
+  .banner-img {
     display: none;
   }
 
