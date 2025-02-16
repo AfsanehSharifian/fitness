@@ -3,7 +3,7 @@ import { Stack, Typography } from "@mui/material";
 
 import Icon from "../assets/icons/gym.png";
 
-const BodyPart = ({ item, bodyPart, setBodyPart }) => {
+const BodyPart = ({ item, setBodyPart, bodyPart }) => {
   return (
     <Stack
       type="button"
@@ -12,7 +12,7 @@ const BodyPart = ({ item, bodyPart, setBodyPart }) => {
       className="bodyPart-card"
       sx={{
         borderTop: bodyPart === item ? "4px solid #ff2625" : "",
-        backgroundColor: "fff",
+        backgroundColor: "#fff",
         borderBottomLeftRadius: "20px",
         width: "270px",
         height: "280px",

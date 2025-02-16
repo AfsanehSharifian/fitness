@@ -8,7 +8,6 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   const [search, setSearch] = useState("");
   const [bodyParts, setBodyParts] = useState([]);
 
-  // to fetch the body parts categories at the beginning of loading the page
   useEffect(() => {
     const fetchExercisesData = async () => {
       const bodyPartsData = await fetchData(
@@ -25,10 +24,9 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   const handleSearch = async () => {
     if (search) {
       const exercisesData = await fetchData(
-        "https://exercisedb.p.rapidapi.com/exercises",
+        "https://exercisedb.p.rapidapi.com/exercises?limit=1000&offset=0",
         exerciseOptions
       );
-
       const searchedExercises = exercisesData.filter(
         (exercise) =>
           exercise.name.toLowerCase().includes(search) ||
@@ -88,8 +86,8 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
       <Box sx={{ position: "relative", width: "100%", p: "20px" }}>
         <HorizontalScrollbar
           data={bodyParts}
-          bodyPart={bodyPart}
           setBodyPart={setBodyPart}
+          bodyPart={bodyPart}
         />
       </Box>
     </Stack>
