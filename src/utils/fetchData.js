@@ -1,8 +1,17 @@
-// getting options from rapid api
+// getting the exerciseDB options function from rapid api
 export const exerciseOptions = {
   method: "GET",
   headers: {
     "x-rapidapi-host": "exercisedb.p.rapidapi.com",
+    "x-rapidapi-key": "a5366c16e1msh7d94ed47fa92ddcp100999jsn6c7331feeb02",
+  },
+};
+
+// getting the youtubeSearchandDownload options function from rapid api
+export const youtubeOptions = {
+  method: "GET",
+  headers: {
+    "x-rapidapi-host": "youtube-search-and-download.p.rapidapi.com",
     "x-rapidapi-key": "a5366c16e1msh7d94ed47fa92ddcp100999jsn6c7331feeb02",
   },
 };
