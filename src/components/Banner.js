@@ -40,7 +40,12 @@ const Banner = () => {
       >
         Exercises
       </Typography>
-      <img src={BannerImage} alt="banner" className="banner-img" />
+      <img
+        src={BannerImage}
+        alt="banner"
+        className="banner-img"
+        style={{ borderRadius: "0 0 0 80px" }}
+      />
     </Box>
   );
 };

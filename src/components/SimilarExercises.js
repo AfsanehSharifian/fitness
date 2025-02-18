@@ -18,7 +18,7 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
         )}
       </Stack>
 
-      <Typography variant="h3" mb='40px'>
+      <Typography variant="h3" mb='40px' mt='50px' >
         Exercises that use the same equipment
       </Typography>
       <Stack direction="row" sx={{ p: "2", position: "relative" }}>
