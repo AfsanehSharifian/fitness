@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { Button, Stack, Typography } from "@mui/material";
 
 const ExerciseCard = ({ exercise }) => {
+  const { id, name, gifUrl, bodyPart, target } = exercise;
+
   return (
-    <Link className="exercise-card" to={`/exercise/${exercise.id}`}>
-      <img src={exercise.gifUrl} alt={exercise.name} loading="lazy" />
+    <Link className="exercise-card" to={`/exercise/${id}`}>
+      <img src={gifUrl} alt={name} loading="lazy" />
       <Stack direction="row">
         <Button
           sx={{
@@ -17,7 +19,7 @@ const ExerciseCard = ({ exercise }) => {
             textTransform: "capitalize",
           }}
         >
-          {exercise.bodyPart}
+          {bodyPart}
         </Button>
         <Button
           sx={{
@@ -29,7 +31,7 @@ const ExerciseCard = ({ exercise }) => {
             textTransform: "capitalize",
           }}
         >
-          {exercise.target}
+          {target}
         </Button>
       </Stack>
       <Typography
@@ -40,7 +42,7 @@ const ExerciseCard = ({ exercise }) => {
         textTransform="capitalize"
         fontSize="22px"
       >
-        {exercise.name}
+        {name}
       </Typography>
     </Link>
   );
